@@ -1,0 +1,124 @@
+---
+import Chip from "../components/chip.astro";
+
+interface Link {
+	desc: string;
+	link: string;
+	icon: string;
+}
+
+const links: Link[] = [
+	{
+		link: "https://linkedin.com/in/damian-ziemba",
+		icon: "fa-brands fa-linkedin",
+		desc: "LinkedIn",
+	},
+	{
+		link: "https://github.com/nazriel",
+		icon: "fa-brands fa-github",
+		desc: "Github",
+	},
+	{
+		link: "/cv.pdf",
+		desc: "Resume",
+		icon: "fa-solid fa-address-card",
+	},
+	{
+		link: "https://instagram.com/damian.ziemba",
+		desc: "Instagram",
+		icon: "fa-brands fa-instagram",
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1e1e1e" />
+		<meta name="msapplication-TileColor" content="#1e1e1e" />
+		<meta name="theme-color" content="#1e1e1e" />
+
+		<meta name="viewport" content="width=device-width" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap"
+			rel="stylesheet"
+		/>
+
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Damian Ziemba's Link Tree" />
+		<meta name="author" content="Damian Ziemba" />
+		<meta property="og:title" content="Damian Ziemba" />
+		<meta property="og:image" content="favicon.png" />
+		<meta property="og:description" content="Damian Ziemba's Link Tree" />
+		<title>Damian Ziemba's Link Tree</title>
+	</head>
+	<body
+		class="bg-[#f5f5f5] dark:bg-[#1e1e1e] flex justify-center items-center w-screen h-screen text-black dark:text-white"
+	>
+		<main class="w-[80%] flex flex-col gap-8">
+			<img
+				class="w-40 h-48 rounded-lg mx-auto"
+				src="/avatar.jpeg"
+				alt=""
+				width="265"
+				height="343"
+			/>
+
+			<h1 class="md:text-6xl text-4xl font-black text-center">
+				Damian Ziemba
+			</h1>
+			<p class="text-center mx-auto">
+				Hey, I'm Damian, Software Engineer from Poland.
+			</p>
+			<div class="flex justify-center gap-8">
+				{
+					links.map((link) => (
+						<Chip
+							link={link.link}
+							icon={link.icon}
+							desc={link.desc}
+						/>
+					))
+				}
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	body {
+		font-family: "Instrument Sans", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: "wdth" 100;
+	}
+</style>
