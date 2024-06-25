@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'font-awesome';
+  src:
+    url('/fonts/font-awesome.woff2?64737827') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fa-"]:before,
+[class*=" fa-"]:before {
+  font-family: "font-awesome";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  opacity: .8;
+
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+
+  font-size: 110%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.fa-github-circled:before {
+  content: '\f09b';
+}
+
+.fa-linkedin:before {
+  content: '\f30c';
+}
+
+.fa-instagram:before {
+  content: '\f16d';
+}
+
+.fa-address-card:before {
+  content: '\f2bb';
+}
