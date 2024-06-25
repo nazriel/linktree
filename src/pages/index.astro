@@ -1,4 +1,6 @@
 ---
+import "../styles/main.css";
+
 import Chip from "../components/chip.astro";
 
 interface Link {
@@ -78,13 +80,6 @@ const links: Link[] = [
 			referrerpolicy="no-referrer"
 		/>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap"
-			rel="stylesheet"
-		/>
-
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Damian Ziemba's Link Tree" />
 		<meta name="author" content="Damian Ziemba" />
@@ -126,12 +121,3 @@ const links: Link[] = [
 	</body>
 </html>
 
-<style>
-	body {
-		font-family: "Instrument Sans", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
-		font-style: normal;
-		font-variation-settings: "wdth" 100;
-	}
-</style>
